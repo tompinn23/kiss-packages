@@ -1,0 +1,3 @@
+git+https://github.com/thestinger/termite#4aa842245f7abb9328bf37d48f814c7b749e8516 termite
+https://github.com/thestinger/vte-ng/archive/0.58.2.a.tar.gz vte-ng
+patches/add_w_exitcode-for-non-glibc-systems.patch

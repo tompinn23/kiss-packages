@@ -1,0 +1,21 @@
+#!/bin/sh -e
+
+topdir=$(pwd)
+
+cd vte-ng
+patch -p1 < ../add_w_exitcode-for-non-glibc-systems.patch
+sed -i 's/shared/static/g' src/meson.build
+meson --prefix="$topdir/vte-static" -Dgir=false -Dvapi=false _build
+ninja -C _build
+ninja -C _build install
+
+cd ../termite
+git submodule init
+git submodule update
+export PKG_CONFIG_PATH="../vte-static/lib/pkgconfig"
+make
+
+cd ..
+#make -C vte-ng/po DESTDIR="$1" install-data
+make -C termite DESTDIR="$1" PREFIX=/usr install
+

@@ -1,0 +1,3 @@
+git  git+https://github.com/thestinger/termite#4aa842245f7abb9328bf37d48f814c7b749e8516
+2aecf7dc4e15789f93be38eec63c8bed22ea3adb431b37e7117bb8bd9a4f28a9  0.58.2.a.tar.gz
+b97fee137d997ffe5da198936a6896518ec8fac23a1249c5863ba3b63cd04c87  add_w_exitcode-for-non-glibc-systems.patch

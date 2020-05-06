@@ -1,0 +1,4 @@
+gtk+3
+startup-notification
+patch make
+gettext-tiny make

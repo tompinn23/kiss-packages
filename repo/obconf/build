@@ -1,0 +1,10 @@
+#!/bin/sh -e
+
+patch -Np1 -i stop-using-libglade.patch
+patch -Np1 -i switch-to-gtk3.patch
+autoreconf -fi
+
+./configure --prefix=/usr
+make
+
+make DESTDIR="$1" install
